@@ -1,6 +1,6 @@
 {
   "name": "cluster-wrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "nodejs cluster wrapper. fork of throng, few minor tweaks",
   "main": "index.js",
   "scripts": {

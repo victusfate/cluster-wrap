@@ -10,24 +10,24 @@ removed lifetime functionality
 
 example usage:
 
-  const clusterWrap = require('cluster-wrap');
+    const clusterWrap = require('cluster-wrap');
 
-  function worker(workerId) {
-    console.log({ action: 'worker', workerId: workerId });
-    // do some worker stuff    
-  }
+    function worker(workerId) {
+      console.log({ action: 'worker', workerId: workerId });
+      // do some worker stuff    
+    }
 
-  function master() {
-    console.log({ action: 'master' });
-    // do some master stuff    
-  }
+    function master() {
+      console.log({ action: 'master' });
+      // do some master stuff    
+    }
 
-  const concurrency = require('os').cpus().length;
-  clusterWrap({
-    worker  : worker,      // required worker function
-    workers : concurrency, // optional, default ncpus
-    master  : master       // optional, default () => {}
-  })
+    const concurrency = require('os').cpus().length;
+    clusterWrap({
+      worker  : worker,      // required worker function
+      workers : concurrency, // optional, default ncpus
+      master  : master       // optional, default () => {}
+    })
 
 
 
