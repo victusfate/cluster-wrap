@@ -1,6 +1,6 @@
 {
   "name": "cluster-wrap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "nodejs cluster wrapper. fork of throng, few minor tweaks",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "thread"
   ],
   "author": "victusfate",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/victusfate/cluster-wrap/issues"
   },
