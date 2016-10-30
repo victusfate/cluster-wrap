@@ -1,11 +1,11 @@
 cluster-wrap
 ===
 
-light wrap around nodejs cluster
-fork of throng https://github.com/hunterloftis/throng
-grabbed emitter handling/proxying
-removed lodash dependency
-removed lifetime functionality
+light wrap around nodejs cluster  
+fork of throng https://github.com/hunterloftis/throng  
+grabbed emitter handling/proxying  
+removed lodash dependency  
+removed lifetime functionality  
 
 
 example usage:
