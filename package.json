@@ -1,0 +1,23 @@
+{
+  "name": "cluster-wrap",
+  "version": "1.0.0",
+  "description": "nodejs cluster wrapper. fork of throng, few minor tweaks",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victusfate/cluster-wrap.git"
+  },
+  "keywords": [
+    "cluster",
+    "thread"
+  ],
+  "author": "victusfate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victusfate/cluster-wrap/issues"
+  },
+  "homepage": "https://github.com/victusfate/cluster-wrap#readme"
+}
