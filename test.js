@@ -5,6 +5,7 @@ let workerIntervals = {};
 function worker(workerId) {
   console.log({ action: 'worker.started', workerId: workerId });
   let dT = Math.floor(Math.random()*3000);
+  // don't create multiple intervals for a single worker
   if (workerIntervals[workerId] == null) {
     workerIntervals[workerId] = setInterval( () => {
       dT = Math.floor(Math.random()*3000);
