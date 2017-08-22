@@ -12,7 +12,6 @@ const defaultOptions = {
 };
 
 const clusterWrap = (oInOptions) => {
-  console.log('called',process.pid)
   let options     = oInOptions || {};
   options.workers = oInOptions.workers ? oInOptions.workers : defaultOptions.workers;
   options.grace   = oInOptions.grace   ? oInOptions.grace   : defaultOptions.grace;
