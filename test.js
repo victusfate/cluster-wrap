@@ -1,4 +1,5 @@
-const clusterWrap = require('./index');
+const cluster       = require('cluster');
+const clusterWrap   = require('./index');
 
 let workerIntervals = {};
 
@@ -22,6 +23,9 @@ function master() {
 }
 
 const concurrency = require('os').cpus().length;
+if (cluster.isMaster) {
+  console.log({ action: 'app', concurrency: concurrency, isMaster: cluster.isMaster, pid: process.pid })
+}
 clusterWrap({
   worker  : worker,
   workers : concurrency, // optional, default ncpus

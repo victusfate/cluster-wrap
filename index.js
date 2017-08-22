@@ -12,6 +12,7 @@ const defaultOptions = {
 };
 
 const clusterWrap = (oInOptions) => {
+  console.log('called',process.pid)
   let options     = oInOptions || {};
   options.workers = oInOptions.workers ? oInOptions.workers : defaultOptions.workers;
   options.grace   = oInOptions.grace   ? oInOptions.grace   : defaultOptions.grace;
@@ -45,8 +46,10 @@ const clusterWrap = (oInOptions) => {
   }
 
   listen();
-  master();
-  fork();
+  if (cluster.isMaster) {  
+    master();
+    fork();
+  }
 
   function proxySignal() {
     emitter.emit('shutdown');
